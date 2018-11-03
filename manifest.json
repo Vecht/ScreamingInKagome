@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+    "name": "Screaming in Kagome",
+    "description": "This extension allows for \"Screaming in Kagome\" reactions on Sufficient Velocity.",
+    "version": "1.021",
+    "icons": {
+        "16": "scream.png",
+        "48": "scream.png",
+        "128": "scream.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://forums.sufficientvelocity.com/*"
+            ],
+            "js": [
+                "jquery.js",
+                "main.js"
+            ],
+            "run_at": "document_end"
+        }
+    ],
+    "permissions" : ["https://chaossnek.com/*"]
+,
+    "web_accessible_resources": [
+        "scream.png"
+    ],
+    "page_action": {
+        "default_icon": "scream.png",
+        "default_title": "Screaming in Kagome"
+    }
+}
